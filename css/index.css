@@ -63,6 +63,7 @@ header{
 
 .login{
     font-size:13px;
+    font-weight:600;
 }
 .login>a{
     border:1px solid #f1f1f1;
@@ -106,6 +107,7 @@ header{
     display:flex;
     justify-content:space-between;
 }
+.news>a{font-weight:600;}
 .newsWrap{
     max-width:1000px;
     margin:auto;
@@ -211,12 +213,12 @@ header{
 /*===============*/
 /*브라우저의 넓이가 480px 이하 일 때*/
 @media screen and (max-width:480px){
-    .logo{margin-top:28px;}
-    .logo img{width:120px;}
+    .logo{margin-top:25px;}
+    .logo img{width:150px;}
     .login{
         font-size:11px;
     }
-    .login>a{padding:4px 8px;}
+    .login>a{padding:4px 6px;}
 
     #main{
         background:url(../images/bg03.jpg) center;
@@ -233,11 +235,14 @@ header{
 }
 /*브라우저의 넓이가 332px 이하 일 때*/
 @media screen and (max-width:332px){
+    .logo{margin-top:28px;}
+    .logo img{width:120px;}
     .login>a{
         border:0;
         border-radius:0;
-        border-top:2px solid #f1f1f1;
+        border-bottom:2px solid #f1f1f1;
         padding:0;
+        padding-bottom:2px;
     }
     .login>a>i{display:none;}
     .news{font-size:13px;}
