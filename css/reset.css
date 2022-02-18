@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;500;600;700&display=swap');
 
 *{margin:0; padding:0; box-sizing:border-box;}
 a{text-decoration:none; color:inherit;}
 ul{list-style:none;}
 
 body{
-    font-family:'Noto Serif KR',serif;
-    letter-spacing:2px;
-    color:#333;
+    font-family:'Hahmlet', serif;
+    letter-spacing:1.5px;
+    user-select:none;
+    color:#fff;
+    background-color:#333;
 }
