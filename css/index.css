@@ -84,14 +84,16 @@ header{
     position:absolute;
     top:75%; left:62%;
     transform:translate(-50%,-50%);
-    background-color:#111;
+    border:2px solid #111;
+    background-color:rgba(0,0,0,0.8);
+    color:#f1f1f1;
     padding:8px 12px;
     font-size:22px;
     font-weight:600;
     cursor:pointer;
 }
 .title:hover{
-    background-color:rgba(0,0,0,0.8);
+    background-color:rgba(0,0,0,0.5);
     transition:all 0.3s;
 }
 /*====================*/
@@ -233,7 +235,7 @@ header{
         font-size:18px;
     }
 
-    #contents2{height:773px;}
+    #contents2{height:853px;}
     .text{
         width:80%;
     }
@@ -269,7 +271,7 @@ header{
     }
     .newsBox>p{font-size:12px;}
 
-    #contents2{height:682px;}
+    #contents2{height:757px;}
 
 }
 /*===============*/
@@ -295,7 +297,7 @@ header{
         width:90%;
     }
 
-    #contents2{height:594px;}
+    #contents2{height:620px;}
     .text>h3{font-size:14px;}
     .text>h3>span{
         font-size:12px;
@@ -324,7 +326,7 @@ header{
     }
     .newsBox>p{font-size:10px;}
 
-    #contents2{height:540px;}
+    #contents2{height:547px;}
     .text{width:85%;}
     .text>h3{font-size:12px; padding:0 4px;}
     .text>h3>span{
