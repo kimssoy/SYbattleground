@@ -185,8 +185,8 @@ button:hover{
 }
 .cancelbtn{
     padding:8px 14px;
-    background-color:#333;
-    border:none;
+    background-color:transparent;
+    border:1px solid #f1f1f1;
     cursor:pointer;
     color:#fff;
     float:right;
@@ -205,7 +205,7 @@ button:hover{
 #contents{
     width:100%;
     color:#333;
-    padding-bottom:40px;
+    padding-bottom:60px;
 }
 .news{
     max-width:1000px;
@@ -269,6 +269,7 @@ button:hover{
     margin:auto;
     overflow:hidden;
     position:relative;
+    background-color:#000;
 }
 .textWrap{
     width:100%;
@@ -278,40 +279,57 @@ button:hover{
     color:#ccc;
 }
 .text{
-    width:50%;
+    width:40%;
     margin:auto;
-    border-bottom:2px solid #f1f1f1;
+    border-bottom:1px solid #f1f1f1;
     padding-bottom:10px;
 }
-.text>h3{padding:0 10px;}
+.text>h3{font-size:16px; padding:0 10px;}
 .text>h3>span{
     float:right;
     font-size:14px;
     font-weight:500;
 }
 .textWrap img{
-    width:50%;
     display:block;
     margin:auto;
-    padding:40px 0 60px 0;
+}
+.textWrap .c-1{
+    width:40%;
+    padding:20px 0 20px 0;
+}
+.imgWrap{
+    width:40%;
+    display:flex;
+    justify-content:center;
+    margin:auto;
+    padding-top:20px;
+}
+.textWrap .c-2{
+    width:100%;
+    padding-right:5px;
+}
+.textWrap .c-3{
+    width:100%;
+    padding-left:5px;
 }
 .textWrap img:hover{
     filter:grayscale(1);
     transition:all 0.3s;
 }
 .text2{
-    width:50%;
+    width:40%;
     margin:auto;
     padding-top:40px;
     display:flex;
     justify-content:space-between;
-    border-bottom:2px solid #f1f1f1;
-    padding:40px 0px 10px 0px;
+    border-bottom:1px solid #f1f1f1;
+    padding:20px 0px 10px 0px;
 }
-.text2>h3{padding:0 10px;}
+.text2>h3{font-size:16px; padding:0 10px;}
 .text2>a{
     padding:0 10px;
-    font-size:16px;
+    font-size:15px;
     font-weight:600;
 }
 .text2>a:hover{
@@ -390,20 +408,23 @@ footer{
     }
 
     .text{
-        width:80%;
+        width:60%;
     }
-    .text>h3{font-size:16px;}
+    .text>h3{font-size:15px;}
     .text>h3>span{
         font-size:13px;
     }
-    .textWrap img{
-        width:80%;
+    .textWrap .c-1{
+        width:60%;
+    }
+    .imgWrap{
+        width:60%;
     }
     .text2{
-        width:80%;
+        width:60%;
     }
-    .text2>h3{font-size:16px;}
-    .text2>a{font-size:13px;}
+    .text2>h3{font-size:15px;}
+    .text2>a{font-size:14px;}
 }
 /*==================*/
 /*브라우저의 넓이가 768px 이하 일 때*/
@@ -424,6 +445,19 @@ footer{
         font-size:13px;
     }
     .newsBox>p{font-size:12px;}
+
+    .text{
+        width:75%;
+    }
+    .text2{
+        width:75%;
+    }
+    .textWrap .c-1{
+        width:75%;
+    }
+    .imgWrap{
+       width:75%;
+    }
 }
 /*===============*/
 /*브라우저의 넓이가 480px 이하 일 때*/
@@ -447,17 +481,41 @@ footer{
         width:90%;
     }
 
-    .text>h3{font-size:14px;}
-    .text>h3>span{
-        font-size:12px;
+    .imgWrap{
+        width:65%;
+        flex-wrap:wrap;
     }
-    .text2>h3{font-size:14px;}
+    .textWrap .c-1{
+        width:65%;
+    }
+    .textWrap .c-2{
+        padding-right:0px;
+        padding-bottom:5px;
+    }
+    .textWrap .c-3{
+        padding-left:0px;
+        padding-top:5px;
+    }
+    
+    .text{
+        width:76%;
+    }
+    .text2{
+        width:76%;
+        padding-top:10px;
+    }
+    .text>h3{font-size:13px;}
+    .text>h3>span{
+        font-size:11px;
+    }
+    .text2>h3{font-size:13px;}
     .text2>a{font-size:12px;}
     .f_logo img{
         width:150px;
         margin-top:16px;
     }
 }
+
 /*브라우저의 넓이가 332px 이하 일 때*/
 @media screen and (max-width:332px){
     .logo{margin-top:28px;}
@@ -491,14 +549,24 @@ footer{
     }
     .newsBox>p{font-size:10px; padding-left:5px;}
 
-    .text{width:85%;}
+    .imgWrap{
+        width:84%;
+    }
+    .textWrap .c-1{
+        width:84%;
+    }
+    .text{
+        width:84%;
+    }
+    .text2{
+        width:84%;
+    }
     .text>h3{font-size:12px; padding:0 4px;}
     .text>h3>span{
         font-size:10px;
     }
-    .text2{width:85%;}
     .text2>h3{font-size:12px; padding:0 4px;}
-    .text2>a{font-size:10px;}
+    .text2>a{font-size:11px;}
 
     .f_logo img{
         width:120px;
