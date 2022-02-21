@@ -17,6 +17,7 @@ $(function(){
         $(".change").css("display","none");
     });
 
+
     $(window).resize(function(){
         let winW = window.innerWidth;
         if(winW > 980){
@@ -25,6 +26,9 @@ $(function(){
             $(".nav").css("display","none");
             $(".nav>.gnb>a").click(function(e){
                 e.preventDefault();
+            });
+            $("#main").click(function(){
+                $(".nav").slideUp();
             });
         }
     });
