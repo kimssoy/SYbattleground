@@ -251,12 +251,17 @@ button:hover{
     font-size:15px;
     font-weight:600;
     margin:10px 0;
+    padding-left:10px;
 }
 .newsBox>a:nth-child(2)>span{
     font-size:14px;
     font-weight:500;
 }
-.newsBox>p{font-size:13px; font-weight:500;}
+.newsBox>p{
+    font-size:13px;
+    font-weight:500;
+    padding-left:10px;
+}
 /*====================*/
 #contents2{
     width:100%;
@@ -479,11 +484,12 @@ footer{
     .news{font-size:13px;}
     .newsBox>a:nth-child(2){
         font-size:12px;
+        padding-left:5px;
     }
     .newsBox>a:nth-child(2)>span{
         font-size:11px;
     }
-    .newsBox>p{font-size:10px;}
+    .newsBox>p{font-size:10px; padding-left:5px;}
 
     .text{width:85%;}
     .text>h3{font-size:12px; padding:0 4px;}
