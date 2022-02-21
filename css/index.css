@@ -81,6 +81,7 @@ header{
     border-radius:5px;
     padding:5px 10px;
 }
+.play:hover{opacity:0.8;}
 
 .modal{
     display:none;
@@ -121,6 +122,10 @@ header{
     content:"";
     display:block;
     clear:both;
+}
+.container>label:nth-child(6){
+    cursor:pointer;
+    vertical-align:middle;
 }
 label{font-size:14px; color:#f1f1f1;}
 input[type=text],
@@ -308,7 +313,7 @@ button:hover{
     .login>.play{display:none;}
     .popup{margin-right:0;}
 
-    .modal-content{width:500px;}
+    .modal-content{width:550px;}
 
     #main{
         background:url(../images/bg02.jpg) center;
@@ -335,7 +340,7 @@ button:hover{
 /*==================*/
 /*브라우저의 넓이가 768px 이하 일 때*/
 @media screen and (max-width:768px){
-    .modal-content{width:400px;}
+    .modal-content{width:430px;}
     .news{
         max-width:650px;
         font-size:14px;
@@ -363,7 +368,7 @@ button:hover{
         font-size:11px;
         padding:4px 6px;
     }
-    .modal-content{width:300px;}
+    .modal-content{width:310px;}
     .close{font-size:30px; top:-10px;}
 
     #main{
@@ -396,7 +401,7 @@ button:hover{
         padding-bottom:2px;
     }
     .popup>i{display:none;}
-    .modal-content{width:200px;}
+    .modal-content{width:230px;}
     .container{
         padding:14px;
     }
