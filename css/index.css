@@ -43,22 +43,21 @@ header{
     position:absolute;
     left:-40px;
     background-color:#111;
-    font-size:14px;
+    font-size:13px;
     line-height:60px;
     z-index:99999;
     display:none;
     overflow:hidden;
+}
+.sub>li>a{
+    border:1px solid #fff;
+    padding:8px;
 }
 
 .nav>li:hover>a{
     text-decoration:underline;
     text-underline-offset:6px;
     text-decoration-thickness:2px;
-}
-.sub>li:hover{
-    text-decoration:underline;
-    text-underline-offset:4px;
-    text-decoration-thickness:1px;
 }
 
 .popup{
@@ -91,6 +90,7 @@ header{
     z-index: 1;
     overflow:auto;
     background-color:rgba(0,0,0,0.9);
+    z-index:99999999;
 }
 .modal-content{
     background-color:#333;
@@ -286,8 +286,8 @@ button:hover{
         width:100%;
         flex-direction:column;
         align-items:flex-start;
-        background-color:#333;
-        z-index:9999999999;
+        background-color:#111;
+        z-index:999999;
         position:absolute;
         left:0;
         top:80px;
