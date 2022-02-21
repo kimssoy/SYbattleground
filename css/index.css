@@ -94,7 +94,10 @@ header{
     border-radius:5px;
     padding:5px 10px;
 }
-.play:hover{opacity:0.8;}
+.play:hover{
+    opacity:0.8;
+    transition:all 0.2s;
+}
 
 .modal{
     display:none;
@@ -126,7 +129,8 @@ header{
     cursor:pointer;
 }
 .close:hover{
-    color:#04aa6d;
+    color:steelblue;
+    transition:all 0.2s;
 }
 .container{
     color:#f1f1f1;
@@ -153,7 +157,7 @@ input[type=password]{
     font-size:14px;
 }
 button[type=submit]{
-    background-color:#04aa6d;
+    background-color:steelblue;
     color:#fff;
     padding:14px 20px;
     width:100%;
@@ -163,6 +167,7 @@ button[type=submit]{
 }
 button:hover{
     opacity:0.8;
+    transition:all 0.2s;
 }
 .joinbtn{
     padding:0 10px;
@@ -178,7 +183,7 @@ button:hover{
 }
 .cancelbtn{
     padding:8px 14px;
-    background-color:#f44336;
+    background-color:#333;
     border:none;
     cursor:pointer;
     color:#fff;
@@ -192,6 +197,7 @@ button:hover{
     height:100vh;
     background:url(../images/bg01.jpg) center;
     background-size:cover;
+    box-shadow:0 5px 3px rgba(0,0,0,0.2);
 }
 /*====================*/
 #contents{
@@ -206,7 +212,13 @@ button:hover{
     display:flex;
     justify-content:space-between;
 }
-.news>a{font-weight:600;}
+.news>a{
+    font-weight:600;
+}
+.news>a:hover{
+    transform:scale(1.2);
+    transition:all 0.1s;
+}
 .newsWrap{
     max-width:1000px;
     margin:auto;
@@ -228,6 +240,10 @@ button:hover{
     display:block;
     width:100%;
 }
+.newsBox img:hover{
+    transform:scale(1.03);
+    transition:all 0.2s;
+}
 .newsBox>a:nth-child(2){
     display:block;
     font-size:15px;
@@ -242,6 +258,7 @@ button:hover{
 /*====================*/
 #contents2{
     width:100%;
+    height:100vh;
     margin:auto;
     overflow:hidden;
     position:relative;
@@ -249,12 +266,12 @@ button:hover{
 .textWrap{
     width:100%;
     position:absolute;
-    top:100px; left:50%;
-    transform:translateX(-50%);
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
     color:#ccc;
 }
 .text{
-    width:60%;
+    width:50%;
     margin:auto;
     border-bottom:2px solid #f1f1f1;
     padding-bottom:10px;
@@ -266,26 +283,54 @@ button:hover{
     font-weight:500;
 }
 .textWrap img{
-    width:60%;
+    width:50%;
     display:block;
     margin:auto;
     padding:40px 0 60px 0;
 }
+.textWrap img:hover{
+    filter:grayscale(1);
+    transition:all 0.3s;
+}
 .text2{
-    width:60%;
+    width:50%;
     margin:auto;
     padding-top:40px;
     display:flex;
     justify-content:space-between;
     border-bottom:2px solid #f1f1f1;
     padding:40px 0px 10px 0px;
-    margin-bottom:100px;
 }
 .text2>h3{padding:0 10px;}
 .text2>a{
     padding:0 10px;
     font-size:16px;
     font-weight:600;
+}
+.text2>a:hover{
+    transform:scale(1.2);
+    transition:all 0.1s;
+}
+/*====================*/
+footer{
+    width:100%;
+    height:80px;
+    background-color:#111;
+    color:#f1f1f1;
+}
+.f_wrap{
+    display:flex;
+    justify-content:center;
+}
+.f_logo img{
+    display:block;
+    margin:auto;
+    margin-top:15px;
+}
+.f_logo>p{
+    font-size:12px;
+    padding-top:4px;
+    text-align:center;
 }
 /*====================*/
 /*브라우저의 넓이가 980px 이하 일 때*/
@@ -337,7 +382,6 @@ button:hover{
         background-size:cover;
     }
 
-    #contents2{height:853px;}
     .text{
         width:80%;
     }
@@ -373,8 +417,6 @@ button:hover{
         font-size:13px;
     }
     .newsBox>p{font-size:12px;}
-
-    #contents2{height:757px;}
 }
 /*===============*/
 /*브라우저의 넓이가 480px 이하 일 때*/
@@ -398,13 +440,16 @@ button:hover{
         width:90%;
     }
 
-    #contents2{height:620px;}
     .text>h3{font-size:14px;}
     .text>h3>span{
         font-size:12px;
     }
     .text2>h3{font-size:14px;}
     .text2>a{font-size:12px;}
+    .f_logo img{
+        width:150px;
+        margin-top:16px;
+    }
 }
 /*브라우저의 넓이가 332px 이하 일 때*/
 @media screen and (max-width:332px){
@@ -438,7 +483,6 @@ button:hover{
     }
     .newsBox>p{font-size:10px;}
 
-    #contents2{height:547px;}
     .text{width:85%;}
     .text>h3{font-size:12px; padding:0 4px;}
     .text>h3>span{
@@ -447,4 +491,10 @@ button:hover{
     .text2{width:85%;}
     .text2>h3{font-size:12px; padding:0 4px;}
     .text2>a{font-size:10px;}
+
+    .f_logo img{
+        width:120px;
+        margin-top:18px;
+    }
+    .f_logo>p{font-size:11px;}
 }

@@ -5,6 +5,11 @@
     <title>PUBG: 배틀그라운드</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
     <!--폰트어썸-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
@@ -84,7 +89,7 @@
             <a href="#">+ 더보기</a>
         </div>
         <div class="newsWrap">
-            <div class="newsBox">
+            <div class="newsBox box1">
                 <a href="#"><img src="images/c01.jpg" alt="c01"></a>
                 <a href="#">
                     ZOMBIE SURVIVAL 2.0<br>
@@ -92,7 +97,7 @@
                 </a>
                 <p>22.02.16</p>
             </div>
-            <div class="newsBox">
+            <div class="newsBox box2">
                 <a href="#"><img src="images/c02.jpg" alt="c02"></a>
                 <a href="#">
                     2022년 2월 상점 안내<br>
@@ -100,7 +105,7 @@
                 </a>
                 <p>22.02.16</p>
             </div>
-            <div class="newsBox">
+            <div class="newsBox box3">
                 <a href="#"><img src="images/c03.jpg" alt="c03"></a>
                 <a href="#">
                     스페셜 & 파트너 드롭스<br>
@@ -108,7 +113,7 @@
                 </a>
                 <p>22.02.16</p>
             </div>
-            <div class="newsBox">
+            <div class="newsBox box4">
                 <a href="#"><img src="images/c04.jpg" alt="c04"></a>
                 <a href="#">
                     무료플레이 서비스전환기념 이벤트<br>
@@ -135,6 +140,17 @@
         </div>
     </section>
 
+    <footer>
+        <div class="f_wrap">
+            <div class="f_logo">
+                <a href="#"><img src="images/logo.png" alt="logo"></a>
+                <p>
+                    &copy; 2022 soyeon Kim.
+                </p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         const modal = document.querySelector("#id01");
         
@@ -155,9 +171,21 @@
         $(function(){
             $(window).scroll(function(){
                 var scroll = $(window).scrollTop();
-                var newsBoxTop = $(".newsBox").offset().top-500
+                var newsBoxTop = $(".box1").offset().top-500
                 if(scroll > newsBoxTop){
-                    $(".newsBox").addClass("on");
+                    $(".box1").addClass("on");
+                }
+                var newsBoxTop = $(".box2").offset().top-500
+                if(scroll > newsBoxTop){
+                    $(".box2").addClass("on");
+                }
+                var newsBoxTop = $(".box3").offset().top-500
+                if(scroll > newsBoxTop){
+                    $(".box3").addClass("on");
+                }
+                var newsBoxTop = $(".box4").offset().top-500
+                if(scroll > newsBoxTop){
+                    $(".box4").addClass("on");
                 }
             })
         })
