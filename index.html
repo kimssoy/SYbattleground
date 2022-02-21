@@ -20,6 +20,7 @@
 
     <header>
         <button class="toggle" type="button"><i class="fas fa-bars"></i></button>
+        <button class="xBtn" type="button">&times;</button>
         <div class="wrap">
             <div class="logo">
                 <a href="#main"><img src="images/logo.png" alt="logo"></a>
@@ -136,23 +137,30 @@
 
     <script>
         const modal = document.querySelector("#id01");
-        //변수 modal에 #id01요소를 저장(전역변수 = 문서 전체 영역에서 사용할수 있다.)
         
-        function popup(){//popup함수 생성           
+        function popup(){         
             modal.style.display = "block";
-            //팝업요소를 선택하여 display속성을 block으로 변경
         };
 
         function pClose(){
             modal.style.display = "none";
-            //팜업요소를 선택하여 display속성을 none으로 변경
         };
 
-        window.onclick = function(event){//브라우저내에서 클릭이벤트가 발생하면 코드실행
-            if(event.target == modal){//클릭한 요소가 modal요소일때
-                modal.style.display = "none";//modal의 display값을 none으로 변경
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = "none";
             }
-        }
+        };
+
+        $(function(){
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                var newsBoxTop = $(".newsBox").offset().top-500
+                if(scroll > newsBoxTop){
+                    $(".newsBox").addClass("on");
+                }
+            })
+        })
     </script>
 </body>
 

@@ -8,27 +8,28 @@ $(function(){
 
     $(".toggle").click(function(){
         $(".nav").slideToggle()
-        $(".change").css("display","block");
-        $(".one").css("display","none");
+        $(".toggle").css("display","none");
+        $(".xBtn").css("display","block");
     });
 
-    $(".change").click(function(){
-        $(".one").css("display","block");
-        $(".change").css("display","none");
+    $(".xBtn").click(function(){
+        $(".xBtn").css("display","none");
+        $(".toggle").css("display","block");
+        $(".nav").slideToggle()
     });
 
 
     $(window).resize(function(){
         let winW = window.innerWidth;
         if(winW > 980){
+            $(".toggle").css("display","none");
+            $(".xBtn").css("display","none");
             $(".nav").css("display","flex");
         }else{
+            $(".toggle").css("display","block");
             $(".nav").css("display","none");
             $(".nav>.gnb>a").click(function(e){
                 e.preventDefault();
-            });
-            $("#main").click(function(){
-                $(".nav").slideUp();
             });
         }
     });
