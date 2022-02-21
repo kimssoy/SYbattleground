@@ -50,9 +50,28 @@
                 </li>
             </ul>
             <div class="login">
-                <a href="#"><i class="fas fa-user"></i> 로그인</a>
+                <button onclick = "popup()" class="popup"><i class="fas fa-user"></i> 로그인</button>
                 <a href="#" class="play">PLAY</a>
             </div>
+        </div>
+        <!--modal-->
+        <div id="id01" class="modal">
+            <!--contents-->
+            <form class="modal-content animate">
+                <span onclick = "pClose()" class="close" title="close Modal">&times;</span>
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button type="submit">Login</button>
+                    <label><input type="checkbox" checked name="remember"> Remember me</label>
+                </div>
+                <div class="container" style="background-color:#444">
+                    <a href="#" class="joinbtn">Join Us</a>
+                    <button type="button" onclick = "pClose()" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
         </div>
     </header>
 
@@ -120,7 +139,24 @@
     </section>
 
     <script>
+        const modal = document.querySelector("#id01");
+        //변수 modal에 #id01요소를 저장(전역변수 = 문서 전체 영역에서 사용할수 있다.)
+        
+        function popup(){//popup함수 생성           
+            modal.style.display = "block";
+            //팝업요소를 선택하여 display속성을 block으로 변경
+        };
 
+        function pClose(){
+            modal.style.display = "none";
+            //팜업요소를 선택하여 display속성을 none으로 변경
+        };
+
+        window.onclick = function(event){//브라우저내에서 클릭이벤트가 발생하면 코드실행
+            if(event.target == modal){//클릭한 요소가 modal요소일때
+                modal.style.display = "none";//modal의 display값을 none으로 변경
+            }
+        }
     </script>
 </body>
 
